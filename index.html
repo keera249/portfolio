@@ -4,14 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="https://i.pinimg.com/736x/dd/61/45/dd614598bdfdb9aaf0a1985636eca642.jpg"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Playwrite+AU+QLD:wght@100..400&family=Sigmar+One&display=swap"
+      rel="stylesheet"
+    />
     <title>keera</title>
   </head>
   <body>
     <header>
-      <a href="#home">Home</a>
-      <a href="#proj">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#about">About</a>
+      <a href="#home" class="link">Home</a>
+      <a href="#proj" class="link">Projects</a>
+      <a href="#skills" class="link">Skills</a>
+      <a href="#about" class="link">About</a>
     </header>
     <section id="home">
       <img
@@ -22,10 +33,10 @@
       <h1>I'm <span>Keera</span></h1>
       <div class="p">
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, ab
-          error! Excepturi, adipisci? Aspernatur magnam, repellendus accusamus,
-          dolor consequatur nisi minus porro dolore non maiores cupiditate,
-          veniam doloribus officiis. Rerum!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+          molestias, a aliquid dolores harum omnis ipsum culpa magni nisi
+          asperiores consequuntur enim fuga atque, eum voluptatem? Dicta ullam
+          excepturi harum!
         </p>
       </div>
       <div class="social">
@@ -50,28 +61,24 @@
           <img src="imgs/Screenshot 2025-08-02 150256.png" alt="" />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-            eos nulla architecto sit nostrum sint, tenetur repellendus?
           </p>
         </a>
         <a class="two">
           <img src="imgs/Screenshot 2025-08-02 150256.png" alt="" />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-            eos nulla architecto sit nostrum sint, tenetur repellendus?
           </p>
         </a>
         <a class="three">
           <img src="imgs/Screenshot 2025-08-02 150256.png" alt="" />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-            eos nulla architecto sit nostrum sint, tenetur repellendus?
           </p>
         </a>
         <a class="four">
           <img src="imgs/Screenshot 2025-08-02 150256.png" alt="" />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-            eos nulla architecto sit nostrum sint, tenetur repellendus?
           </p>
         </a>
       </div>
@@ -81,14 +88,14 @@
       <div class="skills">
         <div class="front">
           <h1>Front-End skills</h1>
-          <div class="lang box html" data-max="100%">
+          <div class="lang box html per" data-max="100%">
             <div class="icon"><i class="fa-brands fa-html5"></i></div>
             <div class="progress-container">
               <div class="progress-bar"></div>
             </div>
             <span class="percentage">0%</span>
           </div>
-          <div class="css lang box" data-max="80%">
+          <div class="css lang box per" data-max="80%">
             <div class="icon"><i class="fa-brands fa-css3-alt"></i></div>
             <div class="progress-container">
               <div class="progress-bar"></div>
@@ -137,7 +144,7 @@
             </div>
             <span class="percentage">0%</span>
           </div>
-          <div class="c# lang box" data-max="0%">
+          <div class="c lang box" data-max="0%">
             <div class="icon">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/C_Sharp_Logo_2023.svg/1200px-C_Sharp_Logo_2023.svg.png"
@@ -166,7 +173,7 @@
         <!-- start cyper -->
         <div class="front back cyper">
           <h1>cyper-security skills</h1>
-          <div class="linux lang box" data-max="50%">
+          <div class="linux lang box per" data-max="50%">
             <div class="icon">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/800px-Tux.svg.png"
@@ -190,10 +197,22 @@
             </div>
             <span class="percentage">0%</span>
           </div>
-          <div class="cmd lang box" data-max="30%">
+          <div class="cmd lang box per" data-max="30%">
             <div class="icon">
               <img
                 src="https://www.freeiconspng.com/uploads/command-line-icon-1.png"
+                alt=""
+              />
+            </div>
+            <div class="progress-container">
+              <div class="progress-bar"></div>
+            </div>
+            <span class="percentage">0%</span>
+          </div>
+          <div class="hack lang box per" data-max="20%">
+            <div class="icon">
+              <img
+                src="https://iconpusher.com/_next/image?url=https%3A%2F%2Fimg.iconpusher.com%2Fcom.vdx.ethicalhacking%2F20200911.png&w=640&q=75"
                 alt=""
               />
             </div>
@@ -206,12 +225,24 @@
         <!-- end cyper -->
       </div>
     </section>
+    <!-- end skills -->
+    <section class="sec4" id="about">
+      <h1><span>About</span></h1>
+      <div class="about">
+        <h1>Wellcome</h1>
+        <h4>
+          I'm <span> Abubakar Elayassa</span> I'm a sudanese guy Aspiring to
+          become an ethical hacker, I started designing websites as my initial
+          passion and here I am presenting to you some of my humble skillsز
+        </h4>
+      </div>
+    </section>
     <script
       src="https://kit.fontawesome.com/d672bdac09.js"
       crossorigin="anonymous"
     ></script>
     <script>
-      const boxes = document.querySelectorAll(".box");
+      const boxes = document.querySelectorAll(".per");
 
       boxes.forEach((box) => {
         const span = box.querySelector(".percentage");
@@ -245,6 +276,16 @@
               clearInterval(interval);
             }
           }, 10);
+        });
+      });
+    </script>
+    <script>
+      const links = document.querySelectorAll(".link");
+
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          links.forEach((l) => l.classList.remove("active"));
+          link.classList.add("active");
         });
       });
     </script>

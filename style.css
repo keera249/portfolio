@@ -3,6 +3,9 @@
 }
 *{
     text-decoration:none;
+    font-family: "Sigmar One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 html{
     scroll-behavior: smooth;
@@ -12,6 +15,7 @@ body{
     padding: 0px;
     box-sizing: border-box;
 }
+
 header{
     width: 100%;
     height: 50px;
@@ -27,23 +31,27 @@ header{
 header a {
     font-size: 20px;
     padding-left: 3px;
-    border-left:2px solid var(--main-color) ;
-    border-bottom: 2px solid var(--main-color) ;
-    border-bottom-left-radius:7px ;
-    color: var(--main-color);
-    transition: .3s;
+    color: white;
+    transition: .5s;
 }
 header a:hover{
     transform: scale(1.3);
 }
+header a:hover , header a.active{
+    color: var(--main-color);
+    border-left:2px solid var(--main-color) ;
+    border-bottom: 2px solid var(--main-color) ;
+    border-bottom-left-radius:7px ;
+}
+
 section{
-    background-color: black;
     height: 100vh;
     display: flex;
     flex-direction:row;
     align-items: center;
     position: relative;
     overflow: hidden;
+    background-color: black;
 }
 section .img{
     height: 500px;
@@ -77,14 +85,14 @@ section .social a i{
     color: var(--main-color);
     transition: .5s;
 }
-i:hover{
-    
+section .social a i:hover{
     transform: scale(1.3);
     box-shadow: 3px 3px 10px var(--main-color);
 }
 @media (max-width:700px) {
     section{
         flex-direction: column;
+        height: 130vh;
     }
     section .img{
         transform: translateX(-40px);
@@ -92,7 +100,7 @@ i:hover{
     }
     section h1{
         transform: translate(0px, -150px);
-        font-size: 47px;
+        font-size: 40px;
     }
     .p{
         width: 80%;
@@ -101,13 +109,17 @@ i:hover{
         transform: translate(-150px, -90px);
         max-width: 100%;
     }
-    section .social{
-        transform: translate(100px , 900px);
+    #home .social{
+        transform: translate(30px , 950px);
     }
     section .social a i{
         transform: translate(50px ,50px);
         font-size: 30px;
         text-wrap: nowrap;
+    }
+    section .social a i:hover{
+        transform: translate(50px ,50px) scale(1.3);
+
     }
 }
 @media (max-width:1000px) {
@@ -118,13 +130,14 @@ i:hover{
         transform: translate(-40px , 50px);
     }
     section h1{
-        transform: translate(20px, -150px);
+        font-size: 42px;
+        transform: translate(10px, -150px);
     }
     section .p{
     transform: translate(170px, -0px);
     }
     section .social{
-        transform: translate(0px, 700px);
+        transform: translate(0px, 800px);
         width: 400px;
     }
 }
@@ -279,7 +292,7 @@ start skills
     width: 80%;
 }
 .front{
-    background-color: rgb(255, 0, 0);
+    background-color: var(--main-color);
     height: 200vh;
     width: 100%;
     display: grid;
@@ -291,7 +304,7 @@ start skills
     color: black;
 }
 .front div{
-    background-color: rgba(165, 42, 11, 0.642);
+    background-color: rgba(155, 7, 7, 0.763);
     height: 200px;
     width: 90%;
     margin: 30px;
@@ -302,6 +315,51 @@ start skills
     border-radius: 20px;
     box-shadow: 2px 2px 1px black;
 }
+/*mastrey*/
+.front .box::after{
+    content: "html Mastery";
+    position: absolute;
+    transform: translate(40px , -50px);
+}
+.front .css::after{
+    content: "css Mastery";
+}
+.front .js::after{
+    content: "js Mastery";
+}
+.front .react::after{
+    content: "react Mastery";
+}
+.front .python::after{
+    content: "python Mastery";
+}
+.front .java::after{
+    content: "java Mastery";
+}
+.front .c::after{
+    content: "c# Mastery";
+}
+.front .sql::after{
+    content: "sql Mastery";
+}
+.front .linux::after{
+    content: "linux Mastery";
+}
+.front .net::after{
+    content: "networks Mastery";
+}
+.front .cmd::after{
+    content: "CMD Mastery";
+}
+.front .hack::after{
+    content: "ethiacl hacking Mastery";
+}
+@media (max-width:700px) {
+    .front .box::after{
+        transform: translate(0px , -100px);
+    }
+}
+/*mastrey*/
 .lang .icon {
     font-size: 100px;
     height: 150px;
@@ -320,6 +378,9 @@ start skills
     direction: ltr;
 }
 .box .progress-container .progress-bar{
+    height: 0px;
+}
+.per .progress-container .progress-bar{
     height: 15px;
     border-radius: 20px;
     background-color: red;
@@ -354,6 +415,10 @@ start skills
 /* start cyber security */
 .cyper h1{
 transform: translate(350px,70px);
+}
+.front .box .icon img{
+    height: 150px;
+    width: 150px;
 }
 /* end cyber security */
 @media (max-width:700px) {
@@ -418,12 +483,12 @@ transform: translate(350px,70px);
         display: none;
     }
     .skills .front h1{
-        transform: translate(50px);
-        font-size: 35px;
-    }
-    .skills .cyper h1{
         font-size: 30px;
-        transform: translate(30px);
+        transform: translate(20px , 40px);
+    }
+    #skills .cyper h1{
+        font-size: 26px;
+        transform: translate(0px);
     }
     /* end front */
     /* start cyper  */
@@ -442,7 +507,40 @@ transform: translate(350px,70px);
         content: "30%";
     }
 }
-
+@media (max-width:1000px) {
+    .front h1{
+        transform: translate(150px ,100px);
+    }
+    .cyper h1{
+        transform: translate(80px , 100px);
+    }
+}
 /*
 end skills
 */
+/* start about */
+.sec4{
+    border-top:1px var(--main-color) solid ;
+    height: 100vh;
+    flex-direction: column;
+}
+.sec4 h1{
+    transform: translate(0px , 0px );
+}
+.about{
+    background-color: var(--main-color);
+    border-radius: 100px;
+    height: 400px;
+    width: 80%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column; 
+}
+.about span{
+    color: black;
+    font-size: 30px;
+    
+}
+/* finaly */
+
