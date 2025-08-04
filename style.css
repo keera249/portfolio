@@ -4,6 +4,9 @@
 *{
     text-decoration:none;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0px;
     padding: 0px;
@@ -11,12 +14,15 @@ body{
 }
 header{
     width: 100%;
-    height: 100px;
+    height: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: black;
     overflow: hidden;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
 }
 header a {
     font-size: 20px;
@@ -39,7 +45,7 @@ section{
     position: relative;
     overflow: hidden;
 }
-section img{
+section .img{
     height: 500px;
     margin-left: 100px;
     margin-top: -10px;
@@ -76,16 +82,11 @@ i:hover{
     transform: scale(1.3);
     box-shadow: 3px 3px 10px var(--main-color);
 }
-@media (width:370px)  {
-    section{
-        background-color: aliceblue;
-    }
-}
 @media (max-width:700px) {
     section{
         flex-direction: column;
     }
-    section img{
+    section .img{
         transform: translateX(-40px);
         width: 300px;
     }
@@ -113,7 +114,7 @@ i:hover{
     section{
         flex-direction: column;
     }
-    section img{
+    section .img{
         transform: translate(-40px , 50px);
     }
     section h1{
@@ -127,3 +128,321 @@ i:hover{
         width: 400px;
     }
 }
+@media (max-height:740px) {
+    section{
+        height: 130vh;
+    }
+}
+/*
+end home
+*/
+/*
+start projects
+*/
+.sec2{
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+.sec2 h1{
+    transform: translateY(-270px);
+}
+.proj{
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows:auto auto ;
+    grid-gap:10px;
+    /*display: flex;
+    justify-content: space-around;
+    align-items:center;
+    flex-wrap: wrap;*/
+    width: 90%;
+    padding: 20px;
+    margin: 10px;
+    height:400px;
+    border-radius: 20px;
+}
+.proj a{
+    height: 200px;
+    width: 550px;
+    margin-top: 0px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--main-color);
+}
+.proj a img{
+    height: 150px;
+
+}
+.proj a p{
+    font-size: 15px;
+    transform: translate(15px , -30px );
+    max-width: 150px;
+    color: black;
+}
+@media (max-width:1000px) {
+    .sec2{
+    height:1000px;
+}
+.sec2 h1{
+    transform: translate( 0px , -450px);
+}
+.proj{
+        grid-template-columns: auto;
+        grid-template-rows:repeat(4 ,auto);
+        height:820px;
+        width: 1000px;
+        transform: translateX(150px);
+    }
+.proj a{
+    width:700px;
+}
+}
+@media (width:1024px) {
+    section .social{
+        width: 342px;
+    }
+    .proj a{
+        width: 450px;
+    }
+    .proj a img{
+        width: 250px;
+    }
+}
+@media (height:1366px) {
+    .sec2{
+        height: 800px;
+    }
+    .proj a{
+        margin-bottom: 20px;
+    }
+    .two , .four{
+        margin-left: 20px;
+    }
+}
+@media (max-width:700px) {
+.sec2{
+    height:1000px;
+}
+.sec2 h1{
+    transform: translate( 0px , -450px);
+}
+.proj{
+    grid-template-columns: auto;
+    grid-template-rows:repeat(4 ,auto);
+    height:100%;
+    width: 870px;
+    transform: translate(270px , 100px);
+}
+.proj a{
+    width: 40%;
+}
+.two{
+    transform: translateY(-40px);
+}
+.three{
+    transform: translateY(-80px);
+}
+.four{
+    transform: translateY(-120px);
+}
+.proj a img{
+    height: 150px;
+    width: 210px;
+}
+.proj a p{
+    transform: translate(15px , 0px);
+    max-width: 90px;
+}
+}
+/*
+end projets
+*/
+/*
+start skills
+*/
+.sec3{
+    flex-direction: column;
+    height: 650vh;
+}
+.sec3 h1{
+    font-size: 40px;
+    transform: translate(0px , 0px);
+}
+.sec3 .skills{
+    height: 200vh;
+    width: 80%;
+}
+.front{
+    background-color: rgb(255, 0, 0);
+    height: 200vh;
+    width: 100%;
+    display: grid;
+    border-radius: 40px;
+    box-shadow: 5px 5px 20px var(--main-color);
+}
+.front h1{
+    transform: translate(38%, 30px);
+    color: black;
+}
+.front div{
+    background-color: rgba(165, 42, 11, 0.642);
+    height: 200px;
+    width: 90%;
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 1px black;
+}
+.lang .icon {
+    font-size: 100px;
+    height: 150px;
+    width: 150px;
+    color: red;
+    border-radius: 30px;
+}
+.percentage{
+    margin-right: 20px;
+}
+.box .progress-container{
+    background-color: rgb(69, 69, 65);
+    height: 15px;
+    border-radius:20px ;
+    position: relative;
+    direction: ltr;
+}
+.box .progress-container .progress-bar{
+    height: 15px;
+    border-radius: 20px;
+    background-color: red;
+    position: absolute;
+    left: -30px;
+}
+.css .icon{
+    color: blue;
+}
+.js .icon{
+    color: yellow;
+}
+.react .icon{
+    color: rgb(94, 171, 197);
+}
+/* end front */
+.back{
+    margin-top: 30px;
+}
+.back .box .icon{
+    width: 150px;
+}
+.back .box .icon img{
+    height:60px;
+    width: 60px;
+}
+.back .sql .icon img{
+    height: 40px;
+    width:80px;
+}
+/* end back */
+/* start cyber security */
+.cyper h1{
+transform: translate(350px,70px);
+}
+/* end cyber security */
+@media (max-width:700px) {
+    .front{
+        overflow: hidden;
+    }
+    .box .progress-container .progress-bar{
+        height: 100%;
+        display: none;
+    }
+    .front div{
+        height: 250px;
+        width: 85%;
+        margin-left:20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+        position: relative;
+    }
+    .box::before{
+        content: "0%";
+        position: absolute;
+        bottom: 30px;
+        font-size: 25px;
+        color: var(--main-color);
+    }
+    .back .box .icon img{
+        height: 100%;
+        width:100%;
+    }
+    .back .sql .icon img{
+    height: 60px;
+    width:120px;
+    }
+    .box .progress-container{
+        width: 60%; 
+        height: 20px;
+        margin: 0px;
+        left:0;
+    }
+    .html::before{
+        content: "100%";
+    }
+    .html .progress-container .progress-bar{
+        width: 100%;
+        height: 20px;
+        margin: 0px;
+        left: 0;
+        display: inline;
+    }
+    .css::before{
+        content: "80%";
+    }
+    .css .progress-container .progress-bar{
+        width: 80%;
+        left:-20px;
+        display: inline;
+    }
+    .percentage{
+        margin-left: 30px;
+        display: none;
+    }
+    .skills .front h1{
+        transform: translate(50px);
+        font-size: 35px;
+    }
+    .skills .cyper h1{
+        font-size: 30px;
+        transform: translate(30px);
+    }
+    /* end front */
+    /* start cyper  */
+    .cyper .linux .progress-container .progress-bar{
+        width: 60%;
+        display: inline;
+    }
+    .linux::before{
+        content: "50%";
+    }
+    .cyper .cmd .progress-container .progress-bar{
+        display: inline;
+        width: 50%;
+    }
+    .cmd::before{
+        content: "30%";
+    }
+}
+
+/*
+end skills
+*/
