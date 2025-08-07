@@ -58,6 +58,8 @@ section .img{
     margin-left: 100px;
     margin-top: -10px;
     border-radius: 50%;
+    box-shadow: 5px 5px 20px var(--main-color);
+
 }
 section h1{
     color: white;
@@ -92,7 +94,7 @@ section .social a i:hover{
 @media (max-width:700px) {
     section{
         flex-direction: column;
-        height: 130vh;
+        height: 110vh;
     }
     section .img{
         transform: translateX(-40px);
@@ -110,7 +112,7 @@ section .social a i:hover{
         max-width: 100%;
     }
     #home .social{
-        transform: translate(30px , 950px);
+        transform: translate(0px , 800px );
     }
     section .social a i{
         transform: translate(50px ,50px);
@@ -141,7 +143,15 @@ section .social a i:hover{
         width: 400px;
     }
 }
-@media (max-height:740px) {
+/* @media (max-width:412px) {
+    section{
+        height: 110vh;
+    }
+    #home #social {
+        transform: translate(0px , 920px);
+    }
+} */
+@media (height:740px) {
     section{
         height: 130vh;
     }
@@ -167,10 +177,6 @@ start projects
     grid-template-columns: auto auto;
     grid-template-rows:auto auto ;
     grid-gap:10px;
-    /*display: flex;
-    justify-content: space-around;
-    align-items:center;
-    flex-wrap: wrap;*/
     width: 90%;
     padding: 20px;
     margin: 10px;
@@ -198,6 +204,9 @@ start projects
     max-width: 150px;
     color: black;
 }
+.proj .three , .proj .four {
+    background-color:rgb(255, 255, 255);
+}
 @media (max-width:1000px) {
     .sec2{
     height:1000px;
@@ -217,8 +226,15 @@ start projects
 }
 }
 @media (width:1024px) {
+    section{
+        height: 50vh;
+    }
+    #home p{
+        transform: translate(-200px , -30px);
+    }
     section .social{
-        width: 342px;
+        width: 400px;
+        transform: translate(470px , 150px );
     }
     .proj a{
         width: 450px;
@@ -254,6 +270,7 @@ start projects
 }
 .proj a{
     width: 40%;
+    box-shadow: 5px 5px 20px var(--main-color);
 }
 .two{
     transform: translateY(-40px);
@@ -293,7 +310,7 @@ start skills
 }
 .front{
     background-color: var(--main-color);
-    height: 200vh;
+    height: 100%;
     width: 100%;
     display: grid;
     border-radius: 40px;
@@ -422,8 +439,12 @@ transform: translate(350px,70px);
 }
 /* end cyber security */
 @media (max-width:700px) {
+    .sec3{
+        height: 630vh;
+    }
     .front{
         overflow: hidden;
+        height: 100%;
     }
     .box .progress-container .progress-bar{
         height: 100%;
@@ -483,12 +504,12 @@ transform: translate(350px,70px);
         display: none;
     }
     .skills .front h1{
-        font-size: 30px;
+        font-size: 25px;
         transform: translate(20px , 40px);
     }
     #skills .cyper h1{
-        font-size: 26px;
-        transform: translate(0px);
+        font-size: 20px;
+        transform: translate(20px , 40px);
     }
     /* end front */
     /* start cyper  */
@@ -506,6 +527,13 @@ transform: translate(350px,70px);
     .cmd::before{
         content: "30%";
     }
+    .cyper .hack .progress-container .progress-bar{
+        width: 30%;
+        display: inline;
+    }
+    .hack::before{
+        content: "20%";
+    }
 }
 @media (max-width:1000px) {
     .front h1{
@@ -521,7 +549,7 @@ end skills
 /* start about */
 .sec4{
     border-top:1px var(--main-color) solid ;
-    height: 100vh;
+    height: 140vh;
     flex-direction: column;
 }
 .sec4 h1{
@@ -530,17 +558,48 @@ end skills
 .about{
     background-color: var(--main-color);
     border-radius: 100px;
-    height: 400px;
+    height: 80%;
     width: 80%;
     display: flex;
     justify-content:center;
     align-items: center;
     flex-direction: column; 
+    box-shadow: 5px 5px 20px var(--main-color);
+}
+.about h1{
+    transform: translate(0px , -40px );
+} 
+.about h4{
+    font-size: 20px;
+    max-width: 80%;
+    transform: translateY(-60px);
 }
 .about span{
-    color: black;
+    color: white;
     font-size: 30px;
-    
+    text-wrap: nowrap;
+}
+@media (max-width:700px) {
+    .sec4{
+        height: auto;
+        justify-content: center;
+        padding-top: 60px;
+        padding-bottom: 100px;
+    }
+    .sec4 h1{
+        transform: translate(0px , 0px);
+    }
+    .about{
+        height: 100%;
+        padding: 0px;
+        overflow: hidden;
+    }
+    .about h1{
+        transform: translate(0px , 0px);
+    }
+    .about span{
+        font-size: 100% ;
+    }
 }
 /* finaly */
 
